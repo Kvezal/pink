@@ -1,2 +1,1 @@
 # pink
-pink
