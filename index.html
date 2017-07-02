@@ -10,16 +10,18 @@
 
 <body>
   <header class="page-header">
-    <a class="logo">
-      <picture class="logo__other">
-        <source media="(min-width: 960px)" srcset="img/logo-desktop@1x.svg 1x, img/logo-desktop@2x.svg 2x">
-        <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
-        <img src="img/logo-mobile@1x.svg" alt="Логотип 'Pink'" srcset="img/logo-mobile@2x.svg 2x">
-      </picture>
-    </a>
     <nav class="main-nav  main-nav--nojs">
       <button class="main-nav__toggle  main-nav__toggle--nojs" type="button"></button>
       <ul class="main-nav__list  main-nav__list--nojs">
+        <li class="main-nav__item  main-nav__item--logo">
+          <a class="logo">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-desktop@1x.svg 1x, img/logo-desktop@2x.svg 2x">
+              <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile@1x.svg" alt="Логотип 'Pink'" srcset="img/logo-mobile@2x.svg 2x">
+            </picture>
+          </a>
+        </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Главная</a>
         </li>
@@ -36,6 +38,7 @@
     </nav>
     <div class="intro  intro--index">
       <div class="intro__wrapper">
+        <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
         <a class="intro__btn  btn" href="#">Скачать приложение</a>
         <div class="intro__inner">
           <svg class="intro__svg  intro__svg--apple" width="" height="">
@@ -84,19 +87,40 @@
         </ul>
       </div>
     </section>
-    <section class="reviews">
-      <div class="reviews__list">
-        <blockquote class="reviews__item">
-          <p class="reviews__text">
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+    <section class="averment">
+      <div class="averment__wrapper">
+        <svg class="averment__svg  averment__svg--timer" width="" height="">
+          <use xlink:href="img/sprite.svg#timer"></use>
+        </svg>
+        <div class="averment__inner">
+          <h2 class="averment__title">Эффект на 24 часа!</h2>
+          <p class="averment__text">
+            Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
           </p>
-          <cite class="reviews__footer">
-            <b class="reviews__author">Николай Петров</b>
-            <span class="reviews__tag">25 лет, водитель трамвая</span>
-          </cite>
-        </blockquote>
+          <a class="averment__link">Узнать больше об исследовании</a>
+        </div>
       </div>
-      <div class="reviews__controls">
+    </section>
+    <section class="reviews">
+      <svg class="reviews__svg  reviews__svg--quotes" width="" height="">
+        <use xlink:href="img/sprite.svg#quotes"></use>
+      </svg>
+      <div class="reviews__wrapper">
+        <button class="reviews__switch  reviews__switch--prev" type="button">Назад</button>
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
+            <cite class="reviews__footer">
+              <b class="reviews__author">Николай Петров</b>
+              <span class="reviews__tag">25 лет, водитель трамвая</span>
+            </cite>
+            <p class="reviews__text">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+        </div>
+        <button class="reviews__switch  reviews__switch--next" type="button">Вперед</button>
+      </div>
+      <div class="reviews__controls  slider">
         <button class="reviews__toggle" type="button"></button>
         <button class="reviews__toggle" type="button"></button>
         <button class="reviews__toggle" type="button"></button>
@@ -120,19 +144,15 @@
         <thead>
           <tr>
             <th class="price__tariff-name"></th>
-          </tr>
-          <tr>
-            <th class="price__tariff-name">Стандарт</th>
-          </tr>
-          <tr>
+            <th class="price__tariff-name  price__tariff-name--hit">Стандарт</th>
             <th class="price__tariff-name"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="price__tariff-item"></td>
-            <td class="price__tariff-item"></td>
-            <td class="price__tariff-item"></td>
+            <td class="price__tariff-item  price__tariff-item--yes">Да</td>
+            <td class="price__tariff-item  price__tariff-item--no">Нет</td>
+            <td class="price__tariff-item  price__tariff-item--no">Нет</td>
           </tr>
           <tr>
             <td class="price__tariff-item  price__tariff-item--yes">Да</td>
@@ -140,13 +160,13 @@
             <td class="price__tariff-item  price__tariff-item--no">Нет</td>
           </tr>
           <tr>
-            <td class="price__tariff-item"></td>
-            <td class="price__tariff-item"></td>
-            <td class="price__tariff-item"></td>
+            <td class="price__tariff-item  price__tariff-item--yes">Да</td>
+            <td class="price__tariff-item  price__tariff-item--yes">Да</td>
+            <td class="price__tariff-item  price__tariff-item--yes">Да</td>
           </tr>
         </tbody>
       </table>
-      <div class="price__controls">
+      <div class="price__controls  slider">
         <button class="price__toggle" type="button"></button>
         <button class="price__toggle" type="button"></button>
         <button class="price__toggle" type="button"></button>
@@ -175,10 +195,39 @@
       </div>
       <div id="map" class="contacts__map"></div>
     </section>
-
   </main>
 
-
+  <footer class="page-footer">
+    <a class="logo logo--footer" href="index.html">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-desktop@2x.svg 2x">
+        <img src="img/logo-mobile@2x.svg" alt="Логотип 'Pink'">
+      </picture>
+    </a>
+    <p class="social">
+      <a class="social__link" href="#">Мы в Твитере
+        <svg class="social__svg  social__svg--tw" width="" height="">
+          <use xlink:href="img/sprite.svg#tw"></use>
+        </svg>
+      </a>
+      <a class="social__link" href="#">Мы в Фейсбуке
+        <svg class="social__svg  social__svg--fb" width="" height="">
+          <use xlink:href="img/sprite.svg#fb"></use>
+        </svg>
+      </a>
+      <a class="social__link" href="#">Мы в Ютюбе
+        <svg class="social__svg  social__svg--yt" width="" height="">
+          <use xlink:href="img/sprite.svg#yt"></use>
+        </svg>
+      </a>
+    </p>
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <span>Разработано</span>
+      <svg class="page-footer__svg-copyright" width="" height="">
+        <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+      </svg>
+    </a>
+  </footer>
 </body>
 
 </html>
