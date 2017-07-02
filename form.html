@@ -10,16 +10,18 @@
 
 <body>
   <header class="page-header">
-    <a class="logo">
-      <picture class="logo__other">
-        <source media="(min-width: 960px)" srcset="img/logo-desktop@1x.svg 1x, img/logo-desktop@2x.svg 2x">
-        <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
-        <img src="img/logo-mobile@1x.svg" alt="Логотип 'Pink'" srcset="img/logo-mobile@2x.svg 2x">
-      </picture>
-    </a>
     <nav class="main-nav  main-nav--nojs">
       <button class="main-nav__toggle  main-nav__toggle--nojs" type="button"></button>
       <ul class="main-nav__list  main-nav__list--nojs">
+        <li class="main-nav__item  main-nav__item--logo">
+          <a class="logo">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-desktop@1x.svg 1x, img/logo-desktop@2x.svg 2x">
+              <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile@1x.svg" alt="Логотип 'Pink'" srcset="img/logo-mobile@2x.svg 2x">
+            </picture>
+          </a>
+        </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Главная</a>
         </li>
@@ -58,21 +60,31 @@
       </fieldset>
 
       <fieldset class="order-form__item  order-form__item--achievements">
-        <div class="order-form__wrapper">
-          <legend class="order-form__title  order-form__title--achievements">
-            Ваши безбашенные достижения в путешествии
-          </legend>
-          <div class="order-form__group">
+        <legend class="order-form__title  order-form__title--achievements">
+          Ваши безбашенные достижения в путешествии
+        </legend>
+        <div class="order-form__group">
+          <div class="order-form__inner">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-1" id="achievements-field-1" checked>
             <label class="order-form__label-check" for="achievements-field-1">Сделал селфи с акулой</label>
+          </div>
+          <div class="order-form__inner">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-2" id="achievements-field-2" checked>
             <label class="order-form__label-check" for="achievements-field-2">Обгорел на пляже</label>
+          </div>
+          <div class="order-form__inner">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-3" id="achievements-field-3">
             <label class="order-form__label-check" for="achievements-field-3">Видел Чака Норриса</label>
+          </div>
+          <div class="order-form__inner">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-4" id="achievements-field-4">
             <label class="order-form__label-check" for="achievements-field-4">Накупил сувениров</label>
+          </div>
+          <div class="order-form__inner">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-5" id="achievements-field-5" checked>
             <label class="order-form__label-check" for="achievements-field-5">Удержал башню</label>
+          </div>
+          <div class="order-form__inner">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-6" id="achievements-field-6">
             <label class="order-form__label-check" for="achievements-field-6">Разгромил отель</label>
           </div>
@@ -80,10 +92,10 @@
       </fieldset>
 
       <fieldset class="order-form__item  order-form__item--contacts">
+        <legend class="order-form__title  order-form__title--tel">
+          Контактная информация
+        </legend>
         <div class="order-form__wrapper">
-          <legend class="order-form__title  order-form__title--tel">
-            Контактная информация
-          </legend>
           <div class="order-form__inner">
             <label class="order-form__title">Номер телефона</label>
             <input class="order-form__input" type="tel" name="tel" pattern="\d{1}[' ']*\d{3}[' ']*\d{3}[' ']*\d{2}[' ']*\d{2}" placeholder="Номер, пожалуйста">
@@ -102,30 +114,26 @@
       </fieldset>
 
       <fieldset class="order-form__item">
-        <div class="order-form__wrapper">
-          <legend class="order-form__title">С каким приложением путешествовали?</legend>
-          <div class="order-form__group">
-            <input class="order-form__input-radio" type="radio" name="application" value="ios" id="ios-field" checked>
-            <label class="order-form__label-radio" for="ios-field">Pink для iOS</label>
-            <input class="order-form__input-radio" type="radio" name="application" value="android" id="android-field">
-            <label class="order-form__label-radio" for="android-field">Pink на Android</label>
-            <input class="order-form__input-radio" type="radio" name="application" value="windows" id="windows-field">
-            <label class="order-form__label-radio" for="windows-field">Windows Phone</label>
-          </div>
+        <legend class="order-form__title">С каким приложением путешествовали?</legend>
+        <div class="order-form__group">
+          <input class="order-form__input-radio" type="radio" name="application" value="ios" id="ios-field" checked>
+          <label class="order-form__label-radio" for="ios-field">Pink для iOS</label>
+          <input class="order-form__input-radio" type="radio" name="application" value="android" id="android-field">
+          <label class="order-form__label-radio" for="android-field">Pink на Android</label>
+          <input class="order-form__input-radio" type="radio" name="application" value="windows" id="windows-field">
+          <label class="order-form__label-radio" for="windows-field">Windows Phone</label>
         </div>
       </fieldset>
 
       <fieldset class="order-form__item">
-        <div class="order-form__wrapper">
-          <label class="order-form__title">Опишите свои эмоции</label>
-          <textarea class="order-form__textarea" name="additional-information" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-        </div>
+        <label class="order-form__title">Опишите свои эмоции</label>
+        <textarea class="order-form__textarea" name="additional-information" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
 
       <div class="order-form__footer">
         <button class="order-form__btn  btn" type="submit">Отправить форму</button>
         <p class="order-form__note">
-          <sup>*</sup>обязательные поля
+          <sup>*</sup>обязательные<span class="order-form__desktop"> для заполнения</span> поля
         </p>
       </div>
     </form>
@@ -133,9 +141,10 @@
 
   <footer class="page-footer">
     <a class="logo logo--footer" href="index.html">
-      <svg class="logo__svg" width="" height="">
-        <use xlink:href="img/sprite.svg#logo-footer"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-desktop@2x.svg 2x">
+        <img src="img/logo-mobile@2x.svg" alt="Логотип 'Pink'">
+      </picture>
     </a>
     <p class="social">
       <a class="social__link" href="#">Мы в Твитере
