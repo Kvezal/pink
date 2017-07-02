@@ -6,7 +6,8 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
-var mqpacker = require("css-mqpacker");
+/*var mqpacker = require("css-mqpacker");*/
+var combinemq = require("gulp-combine-mq");
 var csscomb = require("gulp-csscomb");
 var minify = require("gulp-cssnano");
 var rename = require("gulp-rename");
@@ -27,11 +28,14 @@ gulp.task("style", function() {
         "safari >= 6",
         "ios >= 7",
         "ie >= 10"
-      ]}),
+      ]})/*,
       mqpacker({
         sort: true
-      })
+      })*/
     ]))
+    .pipe(combinemq({
+      beautify: true
+    }))
     .pipe(csscomb())
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
