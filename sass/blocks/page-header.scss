@@ -7,3 +7,9 @@
     min-height: 984px;
   }
 }
+
+@include MQ(L) {
+  .page-header {
+    min-height: 853px;
+  }
+}

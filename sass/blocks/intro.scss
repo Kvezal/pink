@@ -42,8 +42,11 @@
     }
 
     &__wrapper {
-      width: 620px;
+      box-sizing: border-box;
+      width: 640px;
       padding-top: 25px;
+      padding-right: 10px;
+      padding-left: 10px;
     }
 
     &__title {
@@ -69,6 +72,44 @@
       width: 300px;
       margin-top: 39px;
       margin-bottom: 110px;
+    }
+  }
+}
+
+@include MQ(L) {
+  .intro {
+    &--index {
+      margin-top: 99px;
+    }
+
+    &__wrapper {
+      width: 960px;
+      padding-top: 20px;
+    }
+
+    &__title {
+      display: block;
+      width: 250px;
+      min-height: 165px;
+      margin-top: 0;
+      margin-left: 25px;
+      margin-bottom: 0;
+    }
+
+    &__btn {
+      width: 300px;
+      margin-top: 56px;
+    }
+
+    &__inner {
+      width: 300px;
+      margin-top: 68px;
+    }
+
+    &__text {
+      width: 300px;
+      margin-top: 55px;
+      margin-bottom: 124px;
     }
   }
 }
