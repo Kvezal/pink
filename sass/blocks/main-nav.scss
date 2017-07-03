@@ -1,0 +1,28 @@
+.main-nav {
+  min-height: 326px;
+  margin: 0;
+
+  &--nojs {}
+
+  &__toggle {
+    position: absolute;
+  }
+
+  &__list {
+    @include clear-list();
+  }
+
+  &__item {
+    box-sizing: border-box;
+
+    &--logo {
+      min-height: 70px;
+    }
+  }
+
+  &__link {
+    display: block;
+    min-height: 64px;
+  }
+
+}
