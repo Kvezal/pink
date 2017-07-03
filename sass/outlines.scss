@@ -1,17 +1,17 @@
 body {
-  background: #292929 url("../../../Макеты/pink-all/pink/preview/img/pink-index-mobile.png") no-repeat 50% 0px;
+  //background: #292929 url("../../../layout/pink-all/pink/preview/pink-index-mobile.png") no-repeat 50% 0px;
   background-size: 720px auto;
   min-height: 750px;
 }
 @media (min-width: 660px) {
   body {
-    background: #292929 url("../../../Макеты/pink-all/pink/preview/img/pink-index-tablet.png") no-repeat 50% 0px;
+    //background: #292929 url("../../../pink-index-tablet.png") no-repeat 50% 0px;
     background-size: 1178px auto;
   }
 }
 @media (min-width: 960px) {
   body {
-    background: #292929 url("../../../Макеты/pink-all/pink/preview/img/pink-index-desktop.png") no-repeat 50% 0px;
+    //background: #292929 url("../../../pink-index-desktop.png") no-repeat 50% 0px;
     background-size: 1391px auto;
   }
 }
