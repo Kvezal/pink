@@ -4,12 +4,16 @@
 
 @include MQ(M) {
   .page-header {
-    min-height: 984px;
+    &--index {
+      min-height: 984px;
+    }
   }
 }
 
 @include MQ(L) {
   .page-header {
-    min-height: 853px;
+    &--index {
+      min-height: 853px;
+    }
   }
 }
