@@ -1,0 +1,46 @@
+.averment {
+  display: none;
+}
+
+@include MQ(M){
+  .averment {
+    display: block;
+
+    &__wrapper {
+      @include margin-center();
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      box-sizing: border-box;
+      width: 660px;
+      min-height: 394px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__inner {
+      width: 50%;
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+  }
+}
+
+@include MQ(L) {
+  .averment {
+
+    &__wrapper {
+      width: 940px;
+      min-height: 479px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &__inner {
+      width: 61%;
+    }
+  }
+}
