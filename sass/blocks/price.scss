@@ -1,5 +1,6 @@
 .price {
   padding-top: 90px;
+  padding-bottom: 50px;
 
   &__wrapper {
     @include margin-center();
@@ -56,6 +57,7 @@
 @include MQ(M) {
   .price {
     padding-top: 85px;
+    padding-bottom: 70px;
 
     &__wrapper {
       display: flex;
@@ -104,6 +106,7 @@
 @include MQ(L) {
   .price {
     padding-top: 142px;
+    padding-bottom: 95px;
 
     &__wrapper {
       width: 960px;
@@ -122,7 +125,7 @@
     }
 
     &__item {
-      height: 60px;
+      height: 62px;
     }
 
     &__tariff {
@@ -131,7 +134,7 @@
       }
 
       &-item {
-        height: 60px;
+        height: 62px;
       }
     }
   }

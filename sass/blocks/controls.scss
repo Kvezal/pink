@@ -28,3 +28,11 @@
     }
   }
 }
+
+@include MQ(L) {
+  .controls {
+    &--reviews {
+      display: none;
+    }
+  }
+}
