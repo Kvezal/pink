@@ -1,0 +1,30 @@
+.controls {
+  @include center();
+
+  &--reviews {
+    margin-top: 36px;
+  }
+
+  &--price {
+    margin-top: 42px;
+  }
+
+  &__toggle {
+    width: 6px;
+    height: 6px;
+    margin-right: 9.5px;
+    margin-left: 9.5px;
+    padding: 0;
+
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+@include MQ(M) {
+  .controls {
+    &--price {
+      display: none;
+    }
+  }
+}
