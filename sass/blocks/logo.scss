@@ -1,0 +1,17 @@
+
+
+@include MQ(M) {
+  .logo {
+    &--footer {
+      width: 150px;
+    }
+  }
+}
+
+@include MQ(L) {
+  .logo {
+    &--footer {
+      width: 170px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+
+
+@include MQ(M) {
+  .social {
+    width: 320px;
+    margin: 0;
+  }
+}
+
+@include MQ(L) {
+  .social {
+    width: 600px;
+    margin: 0;
+  }
+}
