@@ -11,6 +11,10 @@
   &--bottom {
     min-height: 173px;
   }
+
+  &--form {
+    min-height: 170px;
+  }
 }
 
 @include MQ(M) {
@@ -22,8 +26,12 @@
       min-height: 228px;
     }
 
-    &-bottom {
+    &--bottom {
       min-height: 195px;
+    }
+
+    &--form {
+      min-height: 253px;
     }
   }
 }
@@ -42,6 +50,10 @@
 
     &--bottom {
       min-height: 186px;
+    }
+
+    &--form {
+      min-height: 220px;
     }
   }
 }

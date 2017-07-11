@@ -46,17 +46,23 @@
   </header>
 
   <main>
-    <p class="promo-text">
+    <p class="promo-text  promo-text--form">
       Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
     </p>
     <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="order-form__item">
-        <label class="order-form__label" for="surname-field">Фамилия:</label>
-        <input class="order-form__input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*" required>
-        <label class="order-form__label" for="name-field">Имя:</label>
-        <input class="order-form__input" type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
-        <label class="order-form__label" for="patronym-field">Отчество:</label>
-        <input class="order-form__input" type="text" name="patronym" id="patronym-field" placeholder="Ну и отчество тоже">
+      <fieldset class="order-form__item  order-form__item--name">
+        <div class="order-form__inner-name">
+          <label class="order-form__label" for="surname-field">Фамилия:</label>
+          <input class="order-form__input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*" required>
+        </div>
+        <div class="order-form__inner-name">
+          <label class="order-form__label" for="name-field">Имя:</label>
+          <input class="order-form__input" type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
+        </div>
+        <div class="order-form__inner-name">
+          <label class="order-form__label" for="patronym-field">Отчество:</label>
+          <input class="order-form__input" type="text" name="patronym" id="patronym-field" placeholder="Ну и отчество тоже">
+        </div>
       </fieldset>
 
       <fieldset class="order-form__item  order-form__item--achievements">
@@ -64,27 +70,27 @@
           Ваши безбашенные достижения в путешествии
         </legend>
         <div class="order-form__group">
-          <div class="order-form__inner">
+          <div class="order-form__inner-check">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-1" id="achievements-field-1" checked>
             <label class="order-form__label-check" for="achievements-field-1">Сделал селфи с акулой</label>
           </div>
-          <div class="order-form__inner">
+          <div class="order-form__inner-check">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-2" id="achievements-field-2" checked>
             <label class="order-form__label-check" for="achievements-field-2">Обгорел на пляже</label>
           </div>
-          <div class="order-form__inner">
+          <div class="order-form__inner-check">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-3" id="achievements-field-3">
             <label class="order-form__label-check" for="achievements-field-3">Видел Чака Норриса</label>
           </div>
-          <div class="order-form__inner">
+          <div class="order-form__inner-check">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-4" id="achievements-field-4">
             <label class="order-form__label-check" for="achievements-field-4">Накупил сувениров</label>
           </div>
-          <div class="order-form__inner">
+          <div class="order-form__inner-check">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-5" id="achievements-field-5" checked>
             <label class="order-form__label-check" for="achievements-field-5">Удержал башню</label>
           </div>
-          <div class="order-form__inner">
+          <div class="order-form__inner-check">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-6" id="achievements-field-6">
             <label class="order-form__label-check" for="achievements-field-6">Разгромил отель</label>
           </div>
@@ -96,14 +102,14 @@
           Контактная информация
         </legend>
         <div class="order-form__wrapper">
-          <div class="order-form__inner">
+          <div class="order-form__inner-contacts">
             <label class="order-form__title">Номер телефона</label>
             <input class="order-form__input" type="tel" name="tel" pattern="\d{1}[' ']*\d{3}[' ']*\d{3}[' ']*\d{2}[' ']*\d{2}" placeholder="Номер, пожалуйста">
             <svg class="order-form__svg" width="19.7" height="19.7">
               <use xlink:href="img/sprite.svg#tel"></use>
             </svg>
           </div>
-          <div class="order-form__inner">
+          <div class="order-form__inner-contacts">
             <label class="order-form__title">Адрес почты</label>
             <input class="order-form__input" type="email" name="email" placeholder="Введите почту*" required>
             <svg class="order-form__svg" width="18" height="14">
@@ -113,7 +119,7 @@
         </div>
       </fieldset>
 
-      <fieldset class="order-form__item">
+      <fieldset class="order-form__item  order-form__item--application">
         <legend class="order-form__title">С каким приложением путешествовали?</legend>
         <div class="order-form__group">
           <input class="order-form__input-radio" type="radio" name="application" value="ios" id="ios-field" checked>
@@ -125,7 +131,7 @@
         </div>
       </fieldset>
 
-      <fieldset class="order-form__item">
+      <fieldset class="order-form__item  order-form__item--comment">
         <label class="order-form__title">Опишите свои эмоции</label>
         <textarea class="order-form__textarea" name="additional-information" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
