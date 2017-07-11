@@ -1,7 +1,15 @@
+.logo {
+  display: block;
 
+  width: 75px;
+  height: 22px;
+}
 
 @include MQ(M) {
   .logo {
+    width: 150px;
+    height: 41px;
+
     &--footer {
       width: 150px;
     }
@@ -10,6 +18,9 @@
 
 @include MQ(L) {
   .logo {
+    width: 147px;
+    height: 40px;
+
     &--footer {
       width: 170px;
     }

@@ -1,0 +1,51 @@
+.upload-form {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &__link {
+    display: block;
+  }
+
+  &__wrapper {
+    min-height: 363px;
+  }
+}
+
+@include MQ(M) {
+  .upload-form {
+    display: flex;
+    justify-content: center;
+
+    &__link {
+      width: 48.388%;
+      margin-right: 20px;
+    }
+
+    &__wrapper {
+      width: 48.388%;
+      min-height: 363px;
+    }
+  }
+}
+
+@include MQ(L) {
+  .upload-form {
+    @include margin-center();
+
+    width: 940px;
+    padding-right: 60px;
+    padding-left: 80px;
+
+    &__link {
+      width: 300px;
+      margin-right: 90px;
+    }
+
+    &__wrapper {
+      width: 410px;
+      min-height: 363px;
+    }
+  }
+}

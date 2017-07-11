@@ -1,4 +1,9 @@
 .page-footer {
+  @include center();
+  flex-direction: column;
+
+  min-height: 284px;
+
   &--index {
     display: none;
   }
@@ -6,8 +11,7 @@
 
 @include MQ(M) {
   .page-footer {
-    @include center();
-
+    flex-direction: row;
     box-sizing: border-box;
     width: 100%;
     min-height: 127px;

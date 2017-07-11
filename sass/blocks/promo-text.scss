@@ -1,0 +1,47 @@
+.promo-text {
+  box-sizing: border-box;
+  margin: 0;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  &--top {
+    min-height: 184px;
+  }
+
+  &--bottom {
+    min-height: 173px;
+  }
+}
+
+@include MQ(M) {
+  .promo-text {
+    padding-right: 100px;
+    padding-left: 100px;
+
+    &--top {
+      min-height: 228px;
+    }
+
+    &-bottom {
+      min-height: 195px;
+    }
+  }
+}
+
+@include MQ(L) {
+  .promo-text {
+    @include margin-center();
+
+    width: 960px;
+    padding-right: 190px;
+    padding-left: 190px;
+
+    &--top {
+      min-height: 240px;
+    }
+
+    &--bottom {
+      min-height: 186px;
+    }
+  }
+}
