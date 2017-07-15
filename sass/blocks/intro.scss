@@ -3,17 +3,17 @@
   min-height: 170px;
   margin-top: -70px;
 
-  background-image: url(../img/bg-back-mobile@1x.jpg);
-  background-position: center top;
+  background-image: url(../img/iphone-hand-mobile@1x.png),
+                    url(../img/bg-back-mobile@1x.jpg);
+  background-position: 0 176px,
+                       center top;
   background-repeat: no-repeat;
-  background-size: content;
+  background-size: 256px 286px,
+                   700px 462px;
 
   @include retina {
-    background-image: url(../img/bg-back-mobile@2x.jpg);
-  }
-
-  &--index {
-    //min-height: 271px;
+    background-image: url(../img/iphone-hand-mobile@2x.png),
+                      url(../img/bg-back-mobile@2x.jpg);
   }
 
   &__wrapper {
@@ -24,11 +24,6 @@
       padding-right: 20px;
       padding-left: 19px;
       padding-bottom: 30px;
-
-      background-image: url(../img/iphone-hand-mobile@1x.png);
-      background-repeat: no-repeat;
-      background-position: 0 179px;
-
     }
   }
 
@@ -76,26 +71,43 @@
   .intro {
     @include center();
 
-    &--index {
-      margin-top: 73px;
-    }
+    margin-top: -110px;
+
+    background-image: url(../img/iphone-hand-tablet@1x.png),
+                      url(../img/bg-back-tablet@1x.jpg);
+    background-position: right -20px top 183px,
+                         center;
+    background-repeat: no-repeat;
+    background-size: 700px 545px,
+                     1200px 729px;
 
     &__wrapper {
       box-sizing: border-box;
       width: 660px;
-      min-height: 329px;
+      padding-top: 202px;
       padding-right: 20px;
+      padding-bottom: 0;
       padding-left: 20px;
 
+      text-align: center;
+
       &--index {
-        padding-top: 25px;
+        background-repeat: no-repeat;
+      }
+
+      @include retina {
+        background-image: url(../img/iphone-hand-tablet@2x.png),
+                          url(../img/bg-back-tablet@2x.jpg);
       }
     }
 
     &__title {
       @include margin-center();
+      @include font-set(300, 40px, 48px);
 
       width: 480px;
+
+      color: $secondary-color;
 
       &--index {
         display: block;
@@ -109,7 +121,7 @@
 
     &__btn {
       width: 300px;
-      margin-top: 29px;
+      margin-top: 31px;
     }
 
     &__inner {
@@ -117,10 +129,23 @@
       margin-top: 46px;
     }
 
+    &__svg {
+      &--android {
+        margin-left: 37px;
+        margin-bottom: 3px;
+      }
+
+      &--microsoft {
+        margin-bottom: 3px;
+      }
+    }
+
     &__text {
       width: 300px;
-      margin-top: 39px;
+      margin-top: 36px;
       margin-bottom: 110px;
+
+      font-size: 18px;
     }
   }
 }
