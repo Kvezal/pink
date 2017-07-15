@@ -1,0 +1,17 @@
+.btn {
+  @include font-set(700, 18px, 18px);
+
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 14px;
+  padding-right: 30px;
+  padding-bottom: 17px;
+  padding-left: 30px;
+
+  color: $secondary-color;
+  text-align: center;
+  text-decoration: none;
+
+  border: 3px solid $secondary-color;
+  border-radius: 50px;
+}
