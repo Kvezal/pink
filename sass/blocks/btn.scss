@@ -15,3 +15,9 @@
   border: 3px solid $secondary-color;
   border-radius: 50px;
 }
+
+@include MQ(L) {
+  .btn {
+    @include font(21px, 21px);
+  }
+}

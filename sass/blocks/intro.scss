@@ -5,7 +5,7 @@
 
   background-image: url(../img/iphone-hand-mobile@1x.png),
                     url(../img/bg-back-mobile@1x.jpg);
-  background-position: 0 176px,
+  background-position: left 0 top 176px,
                        center top;
   background-repeat: no-repeat;
   background-size: 256px 286px,
@@ -75,11 +75,16 @@
 
     background-image: url(../img/iphone-hand-tablet@1x.png),
                       url(../img/bg-back-tablet@1x.jpg);
-    background-position: right -20px top 183px,
+    background-position: right -20px bottom 0,
                          center;
     background-repeat: no-repeat;
     background-size: 700px 545px,
                      1200px 729px;
+
+    @include retina {
+      background-image: url(../img/iphone-hand-tablet@2x.png),
+                        url(../img/bg-back-tablet@2x.jpg);
+    }
 
     &__wrapper {
       box-sizing: border-box;
@@ -93,11 +98,6 @@
 
       &--index {
         background-repeat: no-repeat;
-      }
-
-      @include retina {
-        background-image: url(../img/iphone-hand-tablet@2x.png),
-                          url(../img/bg-back-tablet@2x.jpg);
       }
     }
 
@@ -153,7 +153,16 @@
 @include MQ(L) {
   .intro {
     &--index {
-      margin-top: 99px;
+      padding-top: 200px;
+
+      background-image: url(../img/bg-back-desktop@1x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 2560px 853px;
+
+      @include retina {
+        background-image: url(../img/bg-back-desktop@2x.jpg);
+      }
     }
 
     &__wrapper {
@@ -164,11 +173,21 @@
       &--index {
         width: 960px;
         padding-top: 20px;
+
+        background-image: url(../img/iphone-hand-desktop@1x.png);
+        background-position: right -116px bottom 0;
+        background-size: 1050px 645px;
+
+        @include retina {
+          background-image: url(../img/iphone-hand-desktop@2x.png);
+        }
       }
     }
 
     &__title {
       &--index {
+        @include font(50px, 59px);
+
         display: block;
         width: 250px;
         min-height: 165px;
@@ -180,7 +199,10 @@
 
     &__btn {
       width: 300px;
-      margin-top: 56px;
+      margin-top: 53px;
+      padding-right: 10px;
+      padding-bottom: 14px;
+      padding-left: 10px;
     }
 
     &__inner {
@@ -191,7 +213,7 @@
     &__text {
       width: 300px;
       margin-top: 55px;
-      margin-bottom: 124px;
+      margin-bottom: 121px;
     }
   }
 }
