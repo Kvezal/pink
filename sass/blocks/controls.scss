@@ -23,6 +23,10 @@
 
 @include MQ(M) {
   .controls {
+    &--reviews {
+      margin-top: 37px;
+    }
+
     &--price {
       display: none;
     }

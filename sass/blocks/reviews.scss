@@ -1,17 +1,28 @@
 .reviews {
-  min-height: 352px;
+  padding-bottom: 43px;
+
+  &__svg {
+    display: none;
+  }
 
   &__switch {
     display: none;
   }
 
   &__item {
-    min-height: 230px;
+    margin-top: 42px;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  &__footer {
+    @include font(18px, 30px);
+
+    font-style: normal;
+    text-align: center;
   }
 
   &__author {
@@ -23,13 +34,18 @@
   }
 
   &__text {
+    @include font(14px, 30px);
+
+    margin-top: 13px;
     margin-bottom: 0;
+
+    text-align: center;
   }
 }
 
 @include MQ(M) {
   .reviews {
-    min-height: 293px;
+    padding-bottom: 24px;
 
     &__wrapper {
       @include margin-center();
@@ -39,23 +55,55 @@
     }
 
     &__item {
-      min-height: 192px;
-      margin-right: 0;
-      margin-bottom: 0;
-      margin-left: 0;
-      padding-right: 20px;
-      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 26px;
+    }
+
+    &__footer {
+      order: 1;
+
+      margin-top: 35px;
+    }
+
+    &__author {
+      @include font(20px, 30px);
+
+      margin-bottom: 2px;
     }
 
     &__tag {
+      @include font(14px, 30px);
+
       display: block;
+    }
+
+    &__text {
+      @include font(18px, 30px);
     }
   }
 }
 
 @include MQ(L) {
   .reviews {
-    min-height: 415px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 40px;
+
+    &__svg {
+      position: absolute;
+      top: 73px;
+      right: 0;
+      left: 3px;
+
+      display: block;
+      width: 79px;
+      height: 63px;
+      margin-right: auto;
+      margin-left: auto;
+
+      fill: $eleventh-color;
+    }
 
     &__wrapper {
       display: flex;
@@ -65,11 +113,70 @@
     }
 
     &__switch {
+      @include font(0, 0);
+
+      position: relative;
+
       display: block;
+      width: 22px;
+      height: 41px;
+      margin-top: 45px;
+
+      background-color: transparent;
+      border: none;
+
+      &::before {
+        @include absolute-pseudo-element();
+
+        top: 5px;
+
+        box-sizing: border-box;
+        width: 30px;
+        height: 32px;
+
+        border: 2px solid transparentize($primary-color, .7);
+        transform: rotate(45deg);
+      }
+
+      &--prev {
+        margin-left: 11px;
+
+        &::before {
+          right: -14px;
+
+          border-top: transparent;
+          border-right: transparent;
+        }
+      }
+
+      &--next {
+        margin-right: 11px;
+
+        &::before {
+          left: -14px;
+
+          border-left: transparent;
+          border-bottom: transparent;
+        }
+      }
     }
 
     &__item {
       width: 700px;
+      margin-top: 4px;
+      margin-left: 10px;
+    }
+
+    &__footer {
+      margin-top: 36px;
+    }
+
+    &__author {
+      @include font(24px, 30px);
+    }
+
+    &__tag {
+      font-size: 18px;
     }
 
     &__controls {
