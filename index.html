@@ -123,65 +123,87 @@
         <button class="reviews__switch  reviews__switch--next" type="button">Вперед</button>
       </div>
       <div class="controls  controls--reviews">
-        <button class="controls__toggle" type="button"></button>
+        <button class="controls__toggle  controls__toggle--current" type="button"></button>
         <button class="controls__toggle" type="button"></button>
         <button class="controls__toggle" type="button"></button>
       </div>
     </section>
     <section class="price">
-      <div class="price__wrapper">
-        <table  class="price__table-name">
-          <tbody>
-            <tr>
-              <td class="price__item">Розовый фильтр</td>
-            </tr>
-            <tr>
-              <td class="price__item">Смайлики</td>
-            </tr>
-            <tr>
-              <td class="price__item">Комментарии</td>
-            </tr>
-          </tbody>
-        </table>
-        <table  class="price__table-list">
-          <thead>
-            <tr>
-              <th class="price__tariff-name">
-                База
-                <span>1,99 USD</span>
-              </th>
-              <th class="price__tariff-name  price__tariff-name--hit">
-                Стандарт
-                <span>3,99 USD</span>
-              </th>
-              <th class="price__tariff-name">
-                Анлим
-                <span>9,99 USD</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="price__tariff-item  price__tariff-item--yes">Да</td>
-              <td class="price__tariff-item  price__tariff-item--no">Нет</td>
-              <td class="price__tariff-item  price__tariff-item--no">Нет</td>
-            </tr>
-            <tr>
-              <td class="price__tariff-item  price__tariff-item--yes">Да</td>
-              <td class="price__tariff-item  price__tariff-item--yes">Да</td>
-              <td class="price__tariff-item  price__tariff-item--no">Нет</td>
-            </tr>
-            <tr>
-              <td class="price__tariff-item  price__tariff-item--yes">Да</td>
-              <td class="price__tariff-item  price__tariff-item--yes">Да</td>
-              <td class="price__tariff-item  price__tariff-item--yes">Да</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table  class="price__table">
+        <thead>
+          <tr>
+            <th class="price__name  price__name--transparent"></th>
+            <th class="price__name">
+              База
+              <span>1,99 USD</span>
+            </th>
+            <th class="price__name  price__name--hit">
+              Стандарт
+              <span>3,99 USD</span>
+            </th>
+            <th class="price__name">
+              Анлим
+              <span>9,99 USD</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="price__row">
+            <td class="price__item  price__item--feature-name">
+              Розовый фильтр
+            </td>
+            <td class="price__item  price__item--yes">
+              <span class="price__feature-name">Розовый фильтр</span>
+              <span class="price__feature-status">Да</span>
+            </td>
+            <td class="price__item  price__item--yes">
+              <span class="price__feature-name">Розовый фильтр</span>
+              <span class="price__feature-status">Да</span>
+            </td>
+            <td class="price__item  price__item--yes">
+              <span class="price__feature-name">Розовый фильтр</span>
+              <span class="price__feature-status">Да</span>
+            </td>
+          </tr>
+          <tr class="price__row">
+            <td class="price__item  price__item--feature-name">
+              Смайлики
+            </td>
+            <td class="price__item  price__item--no">
+              <span class="price__feature-name">Смайлики</span>
+              <span class="price__feature-status">Нет</span>
+            </td>
+            <td class="price__item  price__item--yes">
+              <span class="price__feature-name">Смайлики</span>
+              <span class="price__feature-status">Да</span>
+            </td>
+            <td class="price__item  price__item--yes">
+              <span class="price__feature-name">Смайлики</span>
+              <span class="price__feature-status">Да</span>
+            </td>
+          </tr>
+          <tr class="price__row">
+            <td class="price__item  price__item--feature-name">
+              Комментарии
+            </td>
+            <td class="price__item  price__item--no">
+              <span class="price__feature-name">Комментарии</span>
+              <span class="price__feature-status">Нет</span>
+            </td>
+            <td class="price__item  price__item--no">
+              <span class="price__feature-name">Комментарии</span>
+              <span class="price__feature-status">Нет</span>
+            </td>
+            <td class="price__item  price__item--yes">
+              <span class="price__feature-name">Комментарии</span>
+              <span class="price__feature-status">Да</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <div class="controls  controls--price">
         <button class="controls__toggle" type="button"></button>
-        <button class="controls__toggle" type="button"></button>
+        <button class="controls__toggle  controls__toggle--current" type="button"></button>
         <button class="controls__toggle" type="button"></button>
       </div>
     </section>

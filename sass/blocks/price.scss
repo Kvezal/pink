@@ -1,102 +1,230 @@
 .price {
-  padding-top: 90px;
+  width: 100%;
+  padding-top: 91px;
   padding-bottom: 50px;
+  overflow: hidden;
 
-  &__wrapper {
-    @include margin-center();
-    position: relative;
-
-    box-sizing: border-box;
-    width: 320px;
-
-    overflow: hidden;
-  }
+  background-color: $twelfth-color;
+  background-image: url(../img/bg-triangle-white.svg);
+  background-repeat: no-repeat;
+  background-position: -5px 0;
+  background-size: contain;
 
   &__table {
-    &-name {
-      position: absolute;
-      top: 100px;
-      left: 21px;
+    position: relative;
+    left: 50%;
+    z-index: 1;
 
-      width: 280px;
+    box-sizing: border-box;
+    width: 262.5%;
 
-      border-collapse: collapse;
+    border-collapse: collapse;
+    transform: translate(-50%);
+  }
+
+  &__name {
+    @include font-set(700, 18px, 30px);
+
+    box-sizing: border-box;
+    width: 280px;
+    height: 98px;
+
+    color: $secondary-color;
+    text-transform: uppercase;
+
+    background-color: $primary-color;
+    border: 2px solid $fourth-color;
+    border-top: none;
+    border-bottom: none;
+
+    &--transparent {
+      display: none;
     }
 
-    &-list {
-      width: 834px;
-      border-collapse: collapse;
+    span {
+      display: block;
 
-      transform: translateX(-256px);
+      font-weight: 300;
+      font-size: 24px;
     }
+
+    &--hit {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        @include font-set(400, 14px, 30px);
+
+        content: "хит";
+        position: absolute;
+        top: 12px;
+        left: -38px;
+
+        width: 120px;
+
+        background-color: $third-color;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__row {
+    background-color: $secondary-color;
   }
 
   &__item {
+    @include font(14px, 30px);
+
+    position: relative;
+
     box-sizing: border-box;
-    width: 280px;
-    height: 60px;
-  }
+    height: 61px;
+    padding-left: 22px;
 
-  &__tariff {
-    &-name {
-      box-sizing: border-box;
-      width: 280px;
-      height: 100px;
+    text-transform: uppercase;
 
-      border: 2px solid #000000;
+    border: 2px solid $fourth-color;
+    border-top: none;
+
+    &--feature-name {
+      display: none;
     }
 
-    &-item {
-      box-sizing: border-box;
-      height: 60px;
-      border: 2px solid #000000;
+    &--yes {
+      &::before {
+        @include absolute-pseudo-element();
+
+        box-sizing: border-box;
+        top: 18px;
+        right: 18px;
+
+        width: 30px;
+        height: 15px;
+
+        border: 3px solid $thirteenth-color;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &--no {
+      &::before {
+        @include absolute-pseudo-element();
+
+        box-sizing: border-box;
+        top: 26px;
+        right: 15px;
+
+        width: 35px;
+        height: 3px;
+
+        background-color: $fourteenth-color;
+        border-radius: 5px;
+        transform: rotate(-44deg);
+      }
+
+      &::after {
+        @include absolute-pseudo-element();
+
+        box-sizing: border-box;
+        top: 26px;
+        right: 15px;
+
+        width: 35px;
+        height: 3px;
+
+        background-color: $fourteenth-color;
+        border-radius: 5px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__feature {
+    &-status {
+      display: none;
     }
   }
 }
 
 @include MQ(M) {
   .price {
-    padding-top: 85px;
-    padding-bottom: 70px;
-
-    &__wrapper {
-      display: flex;
-      align-items: flex-end;
-
-      width: 660px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
+    padding-top: 88px;
+    padding-bottom: 67px;
 
     &__table {
-      &-name {
-        position: static;
+      width: 620px;
+    }
 
-        width: 155px;
+    &__name {
+      box-sizing: border-box;
+      width: 155px;
+      height: 79px;
+
+      font-size: 16px;
+
+      &--transparent {
+        display: table-cell;
+
+        border: none;
+        border-bottom: 2px solid $fourth-color;
+        visibility: hidden;
       }
 
-      &-list {
-        width: 465px;
+      &--hit {
+        &::before {
+          top: 3px;
+          left: -39px;
+        }
+      }
 
-        transform: translateX(0px);
+      span {
+        font-size: 18px;
+        margin-top: -5px;
       }
     }
 
     &__item {
-      box-sizing: border-box;
-      width: 155px;
       height: 47px;
-    }
+      padding-left: 14px;
 
-    &__tariff {
-      &-name {
-        box-sizing: border-box;
-        width: 155px;
-        height: 79px;
+      &--feature-name {
+        display: table-cell;
+
+        font-size: 14px;
+        text-transform: none;
       }
 
-      &-item {
-        height: 47px;
+      &--yes {
+        &::before {
+          top: 0px;
+          right: 50%;
+
+          transform: translate(50%, 67%) rotate(-45deg);
+        }
+      }
+
+      &--no {
+        &::before {
+          top: 20px;
+          left: 50%;
+
+          transform: translate(-50%) rotate(-44deg);
+        }
+
+        &::after {
+          top: 20px;
+          left: 50%;
+
+          transform: translate(-50%) rotate(45deg);
+        }
+      }
+    }
+
+    &__feature {
+      &-name {
+        display: none;
       }
     }
   }
@@ -105,36 +233,63 @@
 
 @include MQ(L) {
   .price {
-    padding-top: 142px;
+    padding-top: 154px;
     padding-bottom: 95px;
 
-    &__wrapper {
-      width: 960px;
-      padding-right: 10px;
-      padding-left: 10px;
+    &__table {
+      width: 940px;
     }
 
-    &__table {
-      &-name {
-        width: 235px;
+    &__name {
+      height: 98px;
+
+      font-size: 18px;
+
+      &--hit {
+        &::before {
+          top: 11px;
+          left: -35px;
+        }
       }
 
-      &-list {
-        width: 705px;
+      span {
+        font-size: 24px;
+        margin-top: 0;
       }
     }
 
     &__item {
-      height: 62px;
-    }
+      width: 25%;
+      height: 61px;
+      padding-left: 21px;
 
-    &__tariff {
-      &-name {
-        height: 98px;
+      &--feature-name {
+        font-size: 18px;
       }
 
-      &-item {
-        height: 62px;
+      &--yes {
+        &::before {
+          top: 11px;
+          right: 50%;
+
+          transform: translate(50%, 67%) rotate(-45deg);
+        }
+      }
+
+      &--no {
+        &::before {
+          top: 27px;
+          left: 50%;
+
+          transform: translate(-50%) rotate(-44deg);
+        }
+
+        &::after {
+          top: 27px;
+          left: 50%;
+
+          transform: translate(-50%) rotate(45deg);
+        }
       }
     }
   }
