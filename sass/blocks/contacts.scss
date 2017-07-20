@@ -1,13 +1,13 @@
 .contacts {
   box-sizing: border-box;
   width: 100%;
-  padding-top: 43px;
+  padding-top: 42px;
 
   &__title {
-    min-height: 50px;
+    @include font-set(300, 24px, 29px);
 
     margin-top: 0;
-    margin-bottom: 42px;
+    margin-bottom: 37px;
 
     text-align: center;
   }
@@ -15,46 +15,103 @@
   &__inner {
     box-sizing: border-box;
     padding-right: 20px;
+    padding-bottom: 37px;
     padding-left: 20px;
   }
 
   &__item {
-    min-height: 52px;
-    margin-bottom: 25px;
-
     text-align: center;
 
-    &--address {
-      min-height: 90px;
+    &--tel {
+      margin-bottom: 23px;
+    }
+
+    &--email {
+      margin-bottom: 27px;
     }
   }
 
   &__name {
+    @include font(18px, 18px);
+
     display: block;
   }
 
+  &__text {
+    @include font-set(300, 24px, 30px);
+
+    display: block;
+    margin-top: 4px;
+
+    color: $third-color;
+  }
+
+  &__link {
+    @include font-set(300, 24px, 30px);
+
+    display: block;
+    margin-top: 6px;
+
+    color: $third-color;
+    text-decoration: none;
+  }
+
   &__map {
+    position: relative;
+
+    width: 100%;
     height: 202px;
+
+    border-color: #eeece6;
+    background-image: url(../img/bg-map-mobile@1x.png);
+    background-repeat: no-repeat;
+    background-position: center 85%;
+    background-size: cover;
+
+    &::after {
+      @include absolute-pseudo-element();
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 34px;
+
+      background-image: url(../img/bg-triangle-white-footer.svg);
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 100% 100%;
+    }
+
+    @include retina {
+      background-image: url(../img/bg-map-mobile@2x.jpg);
+    }
   }
 }
 
 @include MQ(M) {
   .contacts {
-    padding-top: 52px;
+    padding-top: 46px;
 
     &__title {
-      min-height: 90px;
+      @include margin-center();
+      @include font(40px, 48px);
+
+      width: 400px;
+      margin-bottom: 47px;
     }
 
     &__inner {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 0;
     }
 
     &__item {
-      width: 50%;
-      min-height: 60px;
-      margin-bottom: 45px;
+      box-sizing: border-box;
+      width: 48.3%;
+      margin-bottom: 49px;
 
       &--address {
         @include margin-center();
@@ -65,18 +122,35 @@
       }
     }
 
+    &__text {
+      margin-top: 7px;
+    }
+
     &__map {
       height: 378px;
+
+      background-image: url(../img/bg-map-tablet@1x.jpg);
+      background-position: 50% 30%;
+
+      &::after {
+        height: 68px;
+      }
+
+      @include retina {
+        background-image: url(../img/bg-map-tablet@2x.jpg);
+      }
     }
   }
 }
 
 @include MQ(L) {
   .contacts {
-    padding-top: 72px;
+    padding-top: 63px;
 
     &__title {
-      min-height: 110px;
+      @include font(50px, 60px);
+
+      width: 500px;
       margin-bottom: 60px;
     }
 
@@ -88,16 +162,31 @@
     }
 
     &__item {
-      width: 33%;
-      min-height: 75px;
+      width: 30.3%;
+      margin-bottom: 19px;
 
       &--email {
         order: 1;
       }
     }
 
+    &__text {
+      margin-top: 25px;
+    }
+
+    &__link {
+      margin-top: 27px;
+    }
+
     &__map {
-      height: 506px;
+      height: 502px;
+
+      background-image: url(../img/bg-map-desktop@1x.jpg);
+      background-position: 50% 58.5%;
+
+      &::after {
+        height: 105px;
+      }
     }
   }
 }
