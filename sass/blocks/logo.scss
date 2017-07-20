@@ -3,6 +3,12 @@
 
   width: 75px;
   height: 22px;
+
+  &--footer {
+    display: block;
+    width: 148px;
+    height: 40px;
+  }
 }
 
 @include MQ(M) {
@@ -12,6 +18,7 @@
 
     &--footer {
       width: 150px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -20,9 +27,5 @@
   .logo {
     width: 147px;
     height: 40px;
-
-    &--footer {
-      width: 170px;
-    }
   }
 }

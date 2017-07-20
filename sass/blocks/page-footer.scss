@@ -1,20 +1,52 @@
 .page-footer {
   @include center();
-  flex-direction: column;
 
-  min-height: 284px;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-bottom: 41px;
 
   &--index {
     display: none;
+  }
+
+  &__copyright {
+    @include center();
+    @include font(14px, 18px);
+
+    box-sizing: border-box;
+
+    width: 260px;
+    margin: 0;
+
+    color: $primary-color;
+    text-decoration: none;
+
+    transition-duration: .2s;
+
+
+
+    &:active {
+      opacity: .3;
+    }
+  }
+
+  &__svg-copyright {
+    margin-top: 3px;
+    margin-left: 14px;
+
+    fill: $third-color;
+
+    transition-duration: .2s;
   }
 }
 
 @include MQ(M) {
   .page-footer {
     flex-direction: row;
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 127px;
+    justify-content: center;
+    align-items: center;
+    height: 127px;
     padding-right: 20px;
     padding-left: 20px;
 
@@ -23,19 +55,32 @@
     }
 
     &__copyright {
+      display: flex;
+      justify-content: flex-end;
       width: 150px;
+      margin-top: 3px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      min-height: 34px;
+
+      border: none;
     }
   }
 }
 
 @include MQ(L) {
   .page-footer {
-    min-height: 196px;
-    padding-right: 10px;
-    padding-left: 10px;
+    height: 197px;
 
     &__copyright {
       width: 170px;
+      margin-top: 0;
+
+      font-size: 18px;
+    }
+
+    &__svg-copyright {
+      margin-top: 7px;
     }
   }
 }
