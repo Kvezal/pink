@@ -1,15 +1,23 @@
 .promo-text {
+  @include font(14px, 30px);
+
   box-sizing: border-box;
   margin: 0;
   padding-right: 30px;
   padding-left: 30px;
 
+  text-align: center;
+
   &--top {
-    min-height: 184px;
+    //min-height: 184px;
+    padding-top: 45px;
+    padding-bottom: 49px;
   }
 
   &--bottom {
-    min-height: 173px;
+    padding-top: 23px;
+    padding-bottom: 42px;
+    padding-left: 26px;
   }
 
   &--form {

@@ -1,15 +1,37 @@
 .upload-form {
   box-sizing: border-box;
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-top: 20px;
+
+  background: $twelfth-color;
 
   &__link {
     display: block;
+    padding-right: 22px;
+    padding-left: 18px;
+    font-size: 0;
   }
 
   &__wrapper {
+    box-sizing: border-box;
+    width: 100%;
     min-height: 363px;
+  }
+
+  &__inner-top {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 42px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+  }
+
+  &__inner-bottom {
+    padding-right: 22px;
+    padding-left: 18px;
   }
 }
 
