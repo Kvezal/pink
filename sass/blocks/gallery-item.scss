@@ -97,6 +97,8 @@
 
 @include MQ(M) {
   .gallery-item {
+    display: flex;
+    flex-direction: column;
     width: 46.8%;
     margin-right: 10px;
     margin-left: 10px;
@@ -118,6 +120,55 @@
           background-image: url(../img/panorama-tablet@2x.jpg);
         }
       }
+    }
+
+    &__comment {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      min-height: 155px;
+      margin-bottom: 20px;
+      padding-top: 24px;
+      padding-right: 16px;
+      padding-bottom: 22px;
+      padding-left: 27px;
+
+      &--famous {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 50px;
+        padding-bottom: 25px;
+      }
+
+      &-footer {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: auto;
+      }
+    }
+
+    &__text {
+      margin-bottom: 13px;
+
+      &--famous {
+        order: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    &__like-btn {
+      order: 1;
+      margin-left: 17px;
+    }
+
+    &__svg-heart {
+      margin-top: 0;
     }
   }
 }

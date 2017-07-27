@@ -39,3 +39,34 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@include MQ(M) {
+  .range {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    display: block;
+    flex-grow: 1;
+    width: 73.5%;
+    margin-right: 18px;
+
+    vertical-align: top;
+
+    transform: none;
+
+    &__circle {
+      &--crop {
+        left: 75.5%;
+      }
+
+      &--fill {
+        left: 15.5%;
+      }
+
+      &--contrast {
+        left: 51%;
+      }
+    }
+  }
+}

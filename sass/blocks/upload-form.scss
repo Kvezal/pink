@@ -88,16 +88,81 @@
 @include MQ(M) {
   .upload-form {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-right: 20px;
+    padding-bottom: 54px;
 
     &__link {
-      width: 48.388%;
-      margin-right: 20px;
+      width: 46.9%;
+      margin-right: 0px;
     }
 
     &__wrapper {
-      width: 48.388%;
+      width: 42.9%;
       min-height: 363px;
+    }
+
+    &__inner {
+      &-top {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+
+        border-bottom: none;
+      }
+
+      &-filter {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 31px;
+      }
+
+      &-bottom {
+        padding-top: 54px;
+        padding-right: 13px;
+        padding-bottom: 0;
+        padding-left: 2px;
+      }
+    }
+
+    &__svg {
+      margin: 0;
+      margin-left: 3px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      fill: $third-color;
+
+      &--crop {
+        width: 22px;
+        height: 22px;
+        margin-right: 30px;
+      }
+
+      &--fill {
+        width: 24px;
+        height: 22px;
+        margin-right: 28px;
+      }
+
+      &--contrast {
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        margin-right: 30px;
+      }
+    }
+
+    &__btn {
+      padding-left: 25px;
+      &--cancel {
+        margin-top: 24px;
+      }
     }
   }
 }
