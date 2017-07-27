@@ -254,21 +254,21 @@
       </a>
       <div class="upload-form__wrapper">
         <div class="upload-form__inner-top">
-          <svg class="upload-form__svg  upload-form__svg-crop" width="48" height="48">
+          <svg class="upload-form__svg  upload-form__svg--crop  upload-form__svg--current" width="48" height="48">
             <use xlink:href="img/sprite.svg#crop"></use>
           </svg>
           <div class="range">
             <div class="range__scale"></div>
             <div class="range__circle"></div>
           </div>
-          <svg class="upload-form__svg  upload-form__svg-fill" width="48" height="48">
+          <svg class="upload-form__svg  upload-form__svg--fill" width="48" height="48">
             <use xlink:href="img/sprite.svg#fill"></use>
           </svg>
           <div class="range  range--current">
             <div class="range__scale"></div>
             <div class="range__circle"></div>
           </div>
-          <svg class="upload-form__svg  upload-form__svg-contrast" width="32" height="32">
+          <svg class="upload-form__svg  upload-form__svg--contrast" width="32" height="32">
             <use xlink:href="img/sprite.svg#contrast"></use>
           </svg>
           <div class="range">
@@ -277,8 +277,8 @@
           </div>
         </div>
         <div class="upload-form__inner-bottom">
-          <button class="upload__btn  btn" type="submit">Запостить</button>
-          <button class="upload__btn  upload__btn--cancel  btn" type="submit">Отмена</button>
+          <button class="upload-form__btn  upload-form__btn--post  btn" type="submit">Запостить</button>
+          <button class="upload-form__btn  upload-form__btn--cancel  btn" type="reset">Отмена</button>
         </div>
       </div>
     </form>
