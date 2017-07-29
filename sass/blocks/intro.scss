@@ -37,11 +37,12 @@
   &__title {
     @include font-set(300, 24px, 29px);
 
+    min-height: 87px;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 99px;
     padding-right: 20px;
-    padding-bottom: 83px;
+    padding-bottom: 54px;
     padding-left: 20px;
 
     color: $secondary-color;
