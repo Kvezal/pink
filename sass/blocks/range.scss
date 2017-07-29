@@ -70,3 +70,23 @@
     }
   }
 }
+
+@include MQ(L) {
+  .range {
+    margin-right: 30px;
+
+    &__circle {
+      &--crop {
+        left: 27%;
+      }
+
+      &--fill {
+        left: 88.3%;
+      }
+
+      &--contrast {
+        left: 58%;
+      }
+    }
+  }
+}

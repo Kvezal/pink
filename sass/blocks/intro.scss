@@ -183,12 +183,14 @@
 @include MQ(L) {
   .intro {
     background-image: url(../img/bg-back-desktop@1x.jpg);
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: 2560px 853px;
 
     &--index {
       padding-top: 100px;
+
+      background-position: center;
     }
 
     @include retina {
@@ -215,6 +217,9 @@
     }
 
     &__title {
+      padding-top: 93px;
+      padding-bottom: 44px;
+
       &--index {
         @include font(50px, 59px);
 
@@ -224,7 +229,9 @@
         margin-top: 0;
         margin-left: 25px;
         margin-bottom: 0;
+        padding-top: 100px;
         padding-left: 0;
+        padding-bottom: 0;
         padding-right: 0;
       }
     }
