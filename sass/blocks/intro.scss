@@ -117,16 +117,19 @@
       width: 660px;
       padding-top: 80px;
       padding-right: 20px;
-      padding-bottom: 57px;
+      padding-bottom: 0;
       padding-left: 20px;
 
       text-align: center;
 
       &--index {
         padding-top: 103px;
-        padding-bottom: 0;
 
         background-repeat: no-repeat;
+      }
+
+      &--gallery {
+        min-height: 439px;
       }
     }
 
@@ -135,6 +138,7 @@
       @include font-set(300, 50px, 60px);
 
       width: 480px;
+      padding-bottom: 80px;
 
       color: $secondary-color;
 
