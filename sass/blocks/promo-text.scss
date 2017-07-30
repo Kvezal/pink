@@ -49,9 +49,9 @@
     }
 
     &--form {
-      min-height: 254px;
       padding-top: 92px;
       padding-right: 80px;
+      padding-bottom: 72px;
       padding-left: 80px;
     }
 
@@ -79,7 +79,9 @@
     }
 
     &--form {
-      min-height: 220px;
+      padding-right: 95px;
+      padding-bottom: 70px;
+      padding-left: 95px;
     }
   }
 }

@@ -203,6 +203,7 @@
     }
 
     &__wrapper {
+      width: 800px;
       min-height: 284px;
       padding-right: 10px;
       padding-left: 10px;
@@ -222,8 +223,11 @@
     }
 
     &__title {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
       padding-top: 93px;
-      padding-bottom: 44px;
+      padding-bottom: 101px;
 
       &--index {
         @include font(50px, 59px);

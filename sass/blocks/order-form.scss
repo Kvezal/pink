@@ -178,7 +178,7 @@
       margin-bottom: 43px;
     }
 
-    &--tel {
+    &--contacts {
       display: none;
     }
 
@@ -199,7 +199,7 @@
     &-check {
       margin-bottom: 52px;
 
-      &:last-of-type {
+      &--last {
         margin-bottom: 0;
       }
     }
@@ -307,7 +307,7 @@
       &--achievements {
         order: 3;
 
-        padding-bottom: 53px;
+        padding-bottom: 1px;
 
         background-color: transparent;
       }
@@ -344,6 +344,10 @@
 
       &-check {
         padding-left: 59px;
+
+        &:last-of-type {
+          margin-bottom: 52px;
+        }
       }
     }
 
@@ -366,7 +370,7 @@
         margin-bottom: 38px;
       }
 
-      &--tel {
+      &--contacts {
         margin-bottom: 27px;
       }
 
@@ -435,10 +439,6 @@
       sup {
         color: $third-color;
       }
-
-      &-desktop {
-        display: none;
-      }
     }
   }
 }
@@ -457,48 +457,120 @@
 
     &__item {
       width: 100%;
-      margin-bottom: 52px;
+      margin-right: 0;
+      margin-left: 0;
 
       &--name {
         width: 435px;
-        min-height: 310px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
       }
 
       &--application {
         width: 435px;
-        min-height: 310px;
-      }
-
-      &--contacts {
-        min-height: 175px;
+        margin-top: 8px;
         padding-right: 0;
+        padding-bottom: 60px;
         padding-left: 0;
       }
 
       &--achievements {
-        min-height: 245px;
+        padding-bottom: 8px;
+      }
+
+      &--contacts {
+        padding-right: 0;
+        padding-bottom: 13px;
+        padding-left: 0;
       }
 
       &--comment {
-        min-height: 230px;
+        padding-bottom: 40px;
+      }
+    }
+
+    &__label {
+      &-radio {
+        margin-bottom: 44px;
+      }
+    }
+
+    &__title {
+      &--application {
+        box-sizing: border-box;
+        width: 368px;
+        margin-bottom: 41px;
+      }
+
+      &--contacts {
+        margin-bottom: 24px;
+      }
+
+      &--comment {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__inner {
+      &-contacts {
+        padding-bottom: 0px;
+        width: 375px;
+      }
+    }
+
+    &__group {
+      padding-left: 74px;
+
+      &--achievements {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
       }
     }
 
     &__wrapper {
-      @include center();
+      display: flex;
       justify-content: space-between;
 
       box-sizing: border-box;
       padding-right: 58px;
       padding-left: 58px;
+
+      &-achievements {
+        padding-right: 56px;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
     }
 
-    &__inner-contacts {
-      width: 375px;
+    &__textarea {
+      height: 128px;
     }
 
     &__footer {
-      min-height: 77px;
+      width: 100%;
+      margin-top: 65px;
+      margin-bottom: 0px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+
+    &__btn {
+      @include font(18px, 30px);
+
+      width: 32%;
+    }
+
+    &__note {
+      &-desktop {
+        display: inline;
+      }
     }
   }
 }
