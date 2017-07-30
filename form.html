@@ -53,11 +53,11 @@
       <fieldset class="order-form__item  order-form__item--name">
         <div class="order-form__inner-name">
           <label class="order-form__label" for="surname-field">Фамилия:</label>
-          <input class="order-form__input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*" required>
+          <input class="order-form__input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
         </div>
         <div class="order-form__inner-name">
           <label class="order-form__label" for="name-field">Имя:</label>
-          <input class="order-form__input" type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
+          <input class="order-form__input" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" required>
         </div>
         <div class="order-form__inner-name">
           <label class="order-form__label" for="patronym-field">Отчество:</label>
@@ -66,9 +66,9 @@
       </fieldset>
 
       <fieldset class="order-form__item  order-form__item--achievements">
-        <legend class="order-form__title  order-form__title--achievements">
-          Ваши безбашенные достижения в путешествии
-        </legend>
+        <h2 class="order-form__title  order-form__title--achievements">
+          Ваши безбашенные достижения&nbsp;в&nbsp;путешествии
+        </h2>
         <div class="order-form__group">
           <div class="order-form__inner-check">
             <input class="order-form__input-check" type="checkbox" name="achievements-field-1" id="achievements-field-1" checked>
@@ -98,20 +98,20 @@
       </fieldset>
 
       <fieldset class="order-form__item  order-form__item--contacts">
-        <legend class="order-form__title  order-form__title--tel">
+        <h2 class="order-form__title  order-form__title--tel">
           Контактная информация
-        </legend>
+        </h2>
         <div class="order-form__wrapper">
           <div class="order-form__inner-contacts">
-            <label class="order-form__title">Номер телефона</label>
+            <label class="order-form__label  order-form__label--contacts">Номер телефона</label>
             <input class="order-form__input" type="tel" name="tel" pattern="\d{1}[' ']*\d{3}[' ']*\d{3}[' ']*\d{2}[' ']*\d{2}" placeholder="Номер, пожалуйста">
             <svg class="order-form__svg" width="19.7" height="19.7">
               <use xlink:href="img/sprite.svg#tel"></use>
             </svg>
           </div>
           <div class="order-form__inner-contacts">
-            <label class="order-form__title">Адрес почты</label>
-            <input class="order-form__input" type="email" name="email" placeholder="Введите почту*" required>
+            <label class="order-form__label  order-form__label--contacts">Адрес почты</label>
+            <input class="order-form__input" type="email" name="email" placeholder="Введите почту *" required>
             <svg class="order-form__svg" width="18" height="14">
               <use xlink:href="img/sprite.svg#email"></use>
             </svg>
@@ -120,7 +120,7 @@
       </fieldset>
 
       <fieldset class="order-form__item  order-form__item--application">
-        <legend class="order-form__title">С каким приложением путешествовали?</legend>
+        <h2 class="order-form__title  order-form__title--application">С каким приложением путешествовали?</h2>
         <div class="order-form__group">
           <input class="order-form__input-radio" type="radio" name="application" value="ios" id="ios-field" checked>
           <label class="order-form__label-radio" for="ios-field">Pink для iOS</label>
@@ -132,14 +132,14 @@
       </fieldset>
 
       <fieldset class="order-form__item  order-form__item--comment">
-        <label class="order-form__title">Опишите свои эмоции</label>
+        <h2 class="order-form__title  order-form__title--comment">Опишите свои эмоции</h2>
         <textarea class="order-form__textarea" name="additional-information" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
 
       <div class="order-form__footer">
         <button class="order-form__btn  btn" type="submit">Отправить форму</button>
         <p class="order-form__note">
-          <sup>*</sup>обязательные<span class="order-form__desktop"> для заполнения</span> поля
+          <sup>*</sup> &mdash; обязательные<span class="order-form__note-desktop"> для заполнения</span> поля
         </p>
       </div>
     </form>
