@@ -176,6 +176,18 @@
 
     &__link {
       margin-top: 27px;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: $primary-color;
+        text-decoration: none;
+
+        opacity: .3;
+      }
     }
 
     &__map {

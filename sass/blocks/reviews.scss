@@ -134,8 +134,21 @@
         width: 30px;
         height: 32px;
 
-        border: 2px solid transparentize($primary-color, .7);
+        border-width: 2px;
+        border-style: solid;
+        border-color: transparentize($primary-color, .7);
         transform: rotate(45deg);
+
+        transition-property: border-color;
+        transition-duration: .15s;
+      }
+
+      &:hover::before {
+        border-color: transparentize($primary-color, .4);
+      }
+
+      &:active::before {
+        border-color: transparentize($primary-color, .9);
       }
 
       &--prev {

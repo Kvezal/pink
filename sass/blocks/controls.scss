@@ -23,6 +23,16 @@
     border: none;
     border-radius: 50%;
 
+    transition-duration: .15s;
+
+    &:not(&--current):hover {
+      background-color: transparentize($primary-color, .4);
+    }
+
+    &:not(&--current):active {
+      background-color: transparentize($primary-color, .9);
+    }
+
     &--current {
       background-color: $secondary-color;
       box-shadow: 0 0 0 3px $primary-color;

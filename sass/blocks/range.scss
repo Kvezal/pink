@@ -10,10 +10,6 @@
 
   transform: translateX(-50%);
 
-  &--current {
-    display: block;
-  }
-
   &__scale {
     position: absolute;
     width: 100%;
@@ -37,6 +33,12 @@
     border-radius: 50%;
     box-shadow: 0 0 0 2px $third-color;
     transform: translate(-50%, -50%);
+
+    transition-duration: .25s;
+
+    &:active {
+      background-color: $third-color;
+    }
   }
 }
 

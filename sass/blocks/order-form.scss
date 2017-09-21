@@ -46,7 +46,20 @@
 
     font-family: $font-primary;
 
-    border: 2px solid $fourth-color;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $fourth-color;
+    outline: none;
+
+    transition-duration: .25s;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &:focus {
+      border-color: $third-color;
+    }
 
     &-check {
       display: none;
@@ -95,7 +108,19 @@
         height: 35px;
 
         background-color: $secondary-color;
-        border: 2px solid $fourth-color;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $fourth-color;
+
+        transition-duration: .15s;
+      }
+
+      &:hover::before {
+        border-color: $primary-color;
+      }
+
+      &:active::before {
+        border-color: $third-color;
       }
 
       &::after {
@@ -108,12 +133,21 @@
         width: 23px;
         height: 10px;
 
-        border: 2px solid $third-color;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $third-color;
         border-top: none;
         border-right: none;
         transform: rotate(-45deg);
         visibility: hidden;
         opacity: 0;
+
+        transition-duration: .25s;
+      }
+
+      &:active::after {
+        visibility: visible;
+        opacity: 1;
       }
     }
 
@@ -140,8 +174,20 @@
         height: 35px;
 
         background-color: $secondary-color;
-        border: 2px solid $fourth-color;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $fourth-color;
         border-radius: 50%;
+
+        transition-duration: .25s;
+      }
+
+      &:hover::before {
+        border-color: $primary-color;
+      }
+
+      &:active::before {
+        border-color: $third-color;
       }
 
       &::after {
@@ -158,7 +204,12 @@
         border-radius: 50%;
         visibility: hidden;
         opacity: 0;
-        transition-duration: .2s;
+        transition-duration: .15s;
+      }
+
+      &:active::after {
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
@@ -224,7 +275,20 @@
 
     font-family: $font-primary;
 
-    border: 2px solid $fourth-color;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $fourth-color;
+    outline: none;
+
+    transition-duration: .25s;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &:focus {
+      border-color: $third-color;
+    }
   }
 
   &__footer {
@@ -244,6 +308,23 @@
     background-color: $sixth-color;
     border-radius: 0;
     border: none;
+    outline: none;
+
+    transition-duration: .15s;
+
+    &:hover {
+      background-color: $fifteenth-color;
+    }
+
+    &:active {
+      color: transparentize($secondary-color, .7);
+    }
+
+    &:disabled {
+      color: $secondary-color;
+
+      background-color: $fourth-color;
+    }
   }
 
   &__note {

@@ -82,6 +82,19 @@
     color: $secondary-color;
     text-align: center;
   }
+
+  &__btn {
+    transition-duration: .25s;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $third-color;
+    }
+
+    &:active {
+      color: transparentize($third-color, .7);
+    }
+  }
 }
 
 @include MQ(M) {

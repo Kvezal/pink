@@ -19,8 +19,20 @@
 
     font-size: 0;
 
-    border: 3px solid transparentize($primary-color, .7);
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparentize($primary-color, .7);
     border-radius: 50%;
+
+    transition-duration: .25s;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &:active {
+      opacity: .1;
+    }
   }
 
   &__svg {

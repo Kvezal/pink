@@ -77,6 +77,16 @@
       margin-top: 0;
 
       font-size: 18px;
+
+      &:hover .page-footer__svg-copyright {
+        fill: $primary-color;
+      }
+
+      &:active .page-footer__svg-copyright {
+        opacity: .3;
+
+        fill: $primary-color;
+      }
     }
 
     &__svg-copyright {

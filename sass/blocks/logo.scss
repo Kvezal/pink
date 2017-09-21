@@ -9,6 +9,22 @@
     width: 148px;
     height: 40px;
   }
+
+  &__svg-footer {
+    &-mobile {
+      fill: $primary-color;
+      transition: .15s;
+
+      &:hover {
+        fill: $third-color;
+      }
+    }
+
+    &-desktop {
+      display: none;
+    }
+  }
+
 }
 
 @include MQ(M) {
@@ -27,5 +43,17 @@
   .logo {
     width: 147px;
     height: 40px;
+
+    &__svg {
+      &-footer {
+        &-mobile {
+          display: none;
+        }
+
+        &-desktop {
+          display: inline;
+        }
+      }
+    }
   }
 }
