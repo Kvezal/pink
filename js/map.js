@@ -13,8 +13,8 @@
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'https://kvezal.github.io/pink/img/icon-map-marker.svg',
-        iconImageSize: [218, 142],
-        iconImageOffset: [-28, -142]
+        iconImageSize: [36, 36],
+        iconImageOffset: [15, -30]
       });
     myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);

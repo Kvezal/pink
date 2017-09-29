@@ -30,7 +30,7 @@
     "test": "editorconfig-cli",
     "build": "gulp build",
     "start": "npm run build && gulp serve",
-    "pub": "npm run build && gulp deploy"
+    "pub": "gulp pub"
   },
   "editorconfig-cli": [
     "*.html",

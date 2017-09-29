@@ -120,8 +120,9 @@ gulp.task('js:update', ['js:copy', 'compress'], function (done) {
 });
 
 gulp.task('deploy', function () {
+  del('.publish');
   return gulp.src('build/**/*')
-    .pipe(ghPages());
+      .pipe(ghPages());
 });
 
 gulp.task('build', function(callback) {
@@ -133,5 +134,13 @@ gulp.task('build', function(callback) {
     'image',
     'sprite',
     callback
+  );
+});
+
+gulp.task('pub', function (callback) {
+  run(
+      'build',
+      'deploy',
+      callback
   );
 });
