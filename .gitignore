@@ -18,4 +18,5 @@ node_modules/
 build/
 Thumbs.db
 build/
+.publish/
 
